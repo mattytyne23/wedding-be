@@ -1,0 +1,4 @@
+com\example\rsvp\repository\RsvpRepository.class
+com\example\rsvp\RsvpApplication.class
+com\example\rsvp\model\Rsvp.class
+com\example\rsvp\controller\RsvpController.class

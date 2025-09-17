@@ -1,22 +1,26 @@
-# Use an official Java runtime
-FROM eclipse-temurin:17-jdk
+# Use OpenJDK 17 with Maven already installed
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 
-# Create app directory
+# Set work directory
 WORKDIR /app
 
-# Copy Maven wrapper and pom first to leverage caching
-COPY mvnw .
-COPY .mvn .mvn
+# Copy pom.xml and download dependencies
 COPY pom.xml .
+RUN mvn dependency:go-offline
 
-# Build application
-RUN ./mvnw dependency:go-offline
-
-# Copy the rest of the source code
+# Copy the rest of the source
 COPY src src
 
 # Build the JAR
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
+
+# ---- Runtime image ----
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /app
+
+# Copy the built JAR from the previous stage
+COPY --from=build /app/target/*.jar app.jar
 
 # Run the JAR
-CMD ["java", "-jar", "target/wedding-rsvp-backend-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","app.jar"]

@@ -17,10 +17,11 @@ public class Rsvp {
     private String dessert;
     private String allergies;
     private Integer quizAnswer;
+    private String children;
 
     public Rsvp() {}
 
-    public Rsvp(String name, String song, String response, String drinksChoice, String starter, String main, String dessert, String allergies, Integer quizAnswer) {
+    public Rsvp(String name, String song, String response, String drinksChoice, String starter, String main, String dessert, String allergies, Integer quizAnswer, String children) {
         this.name = name;
         this.song = song;
         this.response = response;
@@ -30,6 +31,7 @@ public class Rsvp {
         this.dessert = dessert;
         this.allergies = allergies;
         this.quizAnswer = quizAnswer;
+        this.children = children;
     }
 
     public Long getId() { return id; }
@@ -42,6 +44,7 @@ public class Rsvp {
     public String getDessert() { return  dessert; }
     public String getAllergies() { return  allergies; }
     public Integer getQuizAnswer() { return  quizAnswer;}
+    public String getChildren() { return children; }
 
     public void setId(Long id) { this.id = id; }
     public void setName(String name) { this.name = name; }
@@ -53,4 +56,5 @@ public class Rsvp {
     public void setDessert(String dessert) { this.dessert = dessert;}
     public void setAllergies(String allergies ) { this.allergies = allergies;}
     public void setQuizAnswer(Integer quizAnswer ) {this.quizAnswer = quizAnswer;}
+    public void setChildren(String children ) {this.children = children;}
 }

@@ -1,6 +1,8 @@
+com\example\rsvp\exception\GlobalExceptionHandler.class
 com\example\rsvp\config\CorsConfig.class
 com\example\rsvp\model\Rsvp.class
 com\example\rsvp\controller\RsvpController.class
+com\example\rsvp\exception\DuplicateRsvpException.class
 com\example\rsvp\config\CorsConfig$1.class
 com\example\rsvp\repository\RsvpRepository.class
 com\example\rsvp\RsvpApplication.class

@@ -6,3 +6,4 @@ com\example\rsvp\exception\DuplicateRsvpException.class
 com\example\rsvp\config\CorsConfig$1.class
 com\example\rsvp\repository\RsvpRepository.class
 com\example\rsvp\RsvpApplication.class
+com\example\rsvp\service\EmailService.class

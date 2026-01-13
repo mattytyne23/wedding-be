@@ -3,6 +3,8 @@ package com.example.rsvp.controller;
 import com.example.rsvp.exception.DuplicateRsvpException;
 import com.example.rsvp.model.Rsvp;
 import com.example.rsvp.repository.RsvpRepository;
+import com.example.rsvp.service.EmailService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,9 +15,11 @@ import java.util.List;
 public class RsvpController {
 
     private final RsvpRepository repository;
+    private final EmailService emailService;
 
-    public RsvpController(RsvpRepository repository) {
+    public RsvpController(RsvpRepository repository, EmailService emailService) {
         this.repository = repository;
+        this.emailService = emailService;
     }
 
     @GetMapping
@@ -43,6 +47,19 @@ public class RsvpController {
         }
 
         return repository.saveAll(rsvps);
+    }
+
+    @PostMapping("/process")
+    public ResponseEntity<String> process() {
+
+        // business logic
+
+        emailService.sendSuccessEmail(
+                "user@example.com",
+                "Your request was successful"
+        );
+
+        return ResponseEntity.ok("Success");
     }
 
     @PostMapping

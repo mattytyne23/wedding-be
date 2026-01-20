@@ -1,6 +1,7 @@
 package com.example.rsvp.controller;
 
 import com.example.rsvp.exception.DuplicateRsvpException;
+import com.example.rsvp.exception.RsvpNotFoundException;
 import com.example.rsvp.model.Rsvp;
 import com.example.rsvp.repository.RsvpRepository;
 import com.example.rsvp.service.EmailService;
@@ -48,6 +49,13 @@ public class RsvpController {
 
         return repository.saveAll(rsvps);
     }
+
+    @GetMapping(params = "name")
+    public Rsvp getRsvpByName(@RequestParam String name) {
+        return repository.findByName(name.trim())
+                .orElseThrow(() -> new RsvpNotFoundException(name));
+    }
+
 
     @PostMapping("/process")
     public ResponseEntity<String> process() {

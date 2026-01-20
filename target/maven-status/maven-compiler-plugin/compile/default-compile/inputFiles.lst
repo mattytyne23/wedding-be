@@ -3,6 +3,7 @@ C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\service\Email
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\repository\RsvpRepository.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\RsvpApplication.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\model\Rsvp.java
+C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\exception\RsvpNotFoundException.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\config\CorsConfig.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\exception\DuplicateRsvpException.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\exception\GlobalExceptionHandler.java

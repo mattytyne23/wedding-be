@@ -27,7 +27,7 @@ public class RsvpController {
     public List<Rsvp> getAllRsvps() {
         return repository.findAll();
     }
-
+    
     @PostMapping("/batch")
     public List<Rsvp> createMultipleRsvps(@RequestBody List<Rsvp> rsvps) {
 

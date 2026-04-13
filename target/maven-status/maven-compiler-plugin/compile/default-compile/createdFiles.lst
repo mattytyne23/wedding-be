@@ -1,7 +1,10 @@
 com\example\rsvp\config\CorsConfig.class
 com\example\rsvp\model\Rsvp.class
+com\example\rsvp\service\CloudinaryService.class
 com\example\rsvp\exception\DuplicateRsvpException.class
 com\example\rsvp\exception\RsvpNotFoundException.class
+com\example\rsvp\config\CloudinaryConfig.class
+com\example\rsvp\controller\ImageController.class
 com\example\rsvp\repository\RsvpRepository.class
 com\example\rsvp\exception\GlobalExceptionHandler.class
 com\example\rsvp\controller\RsvpController.class

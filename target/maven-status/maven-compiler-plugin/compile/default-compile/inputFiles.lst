@@ -1,9 +1,12 @@
+C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\controller\ImageController.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\controller\RsvpController.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\service\EmailService.java
+C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\config\CloudinaryConfig.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\repository\RsvpRepository.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\RsvpApplication.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\model\Rsvp.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\exception\RsvpNotFoundException.java
+C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\service\CloudinaryService.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\config\CorsConfig.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\exception\DuplicateRsvpException.java
 C:\Users\matty\Documents\wedding-be\src\main\java\com\example\rsvp\exception\GlobalExceptionHandler.java

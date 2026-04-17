@@ -11,7 +11,7 @@ public class CloudinaryConfig {
     @Bean
     public Cloudinary cloudinary() {
         String cloudinaryUrl = System.getenv("CLOUDINARY_URL");
-
+        System.out.println("CLOUDINARY_URL = " + cloudinaryUrl);
         return new Cloudinary(cloudinaryUrl);
     }
 }

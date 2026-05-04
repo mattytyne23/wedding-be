@@ -34,8 +34,8 @@ public class CloudinaryService {
     public String generateGridImageUrl(String publicId) {
         return cloudinary.url()
                 .transformation(new Transformation()
-                        .width(100)
-                        .height(100)
+                        .width(300)
+                        .height(300)
                         .dpr("auto")
                         .crop("fill")
                         .gravity("auto")

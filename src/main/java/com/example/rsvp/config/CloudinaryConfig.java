@@ -21,6 +21,10 @@ public class CloudinaryConfig {
     @Bean
     public Cloudinary cloudinary() {
         String cloudinaryUrl = System.getenv("CLOUDINARY_URL");
+
+        if (cloudinaryUrl == null || cloudinaryUrl.isBlank()) {
+            throw new IllegalStateException("CLOUDINARY_URL is not set in environment");
+        }
         // ✅ Prefer env var (production)
         if (cloudinaryUrl != null && !cloudinaryUrl.isBlank()) {
             return new Cloudinary(cloudinaryUrl);
